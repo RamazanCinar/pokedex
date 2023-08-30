@@ -1,3 +1,5 @@
+'use client'
+
 import SearchBar from '@/components/searchbar';
 import './globals.css';
 
