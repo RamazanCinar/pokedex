@@ -8,11 +8,14 @@ export default function SearchBar() {
     }
 
     return (
-        <input
-            type="text"
-            placeholder="Search a pokemon"
-            value={searchValue}
-            onChange={handleSearchChange}
-        />
+        <div className="flex justify-center">
+            <input
+                className="pl-2 p-1 border rounded-full border-gray-600"
+                type="text"
+                placeholder="Search a pokemon"
+                value={searchValue}
+                onChange={handleSearchChange}
+            />
+        </div>
     )
 }
