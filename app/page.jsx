@@ -1,3 +1,4 @@
+import SearchBar from '@/components/searchbar';
 import './globals.css';
 
 import Link from 'next/link';
@@ -18,7 +19,9 @@ export default function Home () {
         </li>
       </ul>
 
-      
+      <SearchBar />
+
+
 
     </div>
   )
