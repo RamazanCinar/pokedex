@@ -17,15 +17,15 @@ export default function SearchBar() {
         setPokemonData(data);
     } catch (error) {
         console.error('Error !!!!', error);
-        setError("Erreur ! Veuillez entrer un pokémon valide")
+        setError("Error ! Please enter a valid name")
     }
     console.log(pokemonData);
     };
 
 
     return (
-        <div className="flex justify-center">
-            <form onSubmit={handleSearchSubmit}>
+        <div className="flex justify-center flex-col">
+            <form  className="flex justify-center" onSubmit={handleSearchSubmit}>
                 <input
                     className="pl-2 p-1 border rounded-full border-gray-600"
                     type="text"
@@ -37,10 +37,10 @@ export default function SearchBar() {
 
         {error && <p>{error}</p>}
         {pokemonData && (
-        <div>
-          <h2>Informations sur le Pokémon :</h2>
-          <p>{pokemonData.id}</p>
-          <p>{pokemonData.name}</p>
+        <div className="flex justify-center flex-col">
+          <h2>Informations about the Pokémon :</h2>
+          <p> Pokémon no : {pokemonData.id}</p>
+          <p> Name : {pokemonData.name}</p>
         </div>
       )}
         </div>
