@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function SearchBar() {
     const [searchPokemon, setSearchPokemon] = useState('');
     const [pokemonData, setPokemonData] = useState(null);
-
+    const [error, setError] = useState('');
     const handleSearchChange = (event) => {
         setSearchPokemon(event.target.value);
     }
@@ -17,6 +17,7 @@ export default function SearchBar() {
         setPokemonData(data);
     } catch (error) {
         console.error('Error !!!!', error);
+        setError("Erreur ! Veuillez entrer un pokémon valide")
     }
     console.log(pokemonData);
     };
@@ -34,10 +35,12 @@ export default function SearchBar() {
                 />
             </form>
 
+        {error && <p>{error}</p>}
         {pokemonData && (
         <div>
           <h2>Informations sur le Pokémon :</h2>
-          <p>{JSON.stringify(pokemonData, null, 2)}</p>
+          <p>{pokemonData.id}</p>
+          <p>{pokemonData.name}</p>
         </div>
       )}
         </div>
