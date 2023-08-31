@@ -15,9 +15,13 @@ export default function SearchBar() {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchPokemon}/`);
         const data = await response.json();
         setPokemonData(data);
+        setError(null);
+        setSearchPokemon('');
     } catch (error) {
         console.error('Error !!!!', error);
         setError("Error ! Please enter a valid name")
+        setPokemonData(null);
+        setSearchPokemon('');
     }
     console.log(pokemonData);
     };
