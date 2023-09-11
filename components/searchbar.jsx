@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useState } from "react"
 
 export default function SearchBar() {
-    const pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/158.png`
     const [searchPokemon, setSearchPokemon] = useState('');
     const [pokemonData, setPokemonData] = useState(null);
     const [error, setError] = useState('');
