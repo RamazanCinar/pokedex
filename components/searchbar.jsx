@@ -6,7 +6,7 @@ export default function SearchBar() {
     const [searchPokemon, setSearchPokemon] = useState('');
     const [pokemonData, setPokemonData] = useState(null);
     const [error, setError] = useState('');
-    
+
     const handleSearchChange = (event) => {
         setSearchPokemon(event.target.value);
     }
@@ -49,7 +49,7 @@ export default function SearchBar() {
           <p> Pokémon no : {pokemonData.id}</p>
           <p> Name : {pokemonData.name}</p>
           <Image 
-            src={pokemonImage} 
+            src={pokemonData.sprites.other.dream_world.front_default} 
             width={250}
             height={250}
             alt={`image of ${pokemonData.name}`}
