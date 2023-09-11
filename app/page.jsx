@@ -11,13 +11,13 @@ export default function Home () {
       <h1 className="flex justify-center text-3xl text-red-500">Pokédex</h1>
       <ul className=" my-2 flex justify-center flex-wrap space-x-3">
         <li>
-          <Link href="/">Accueil</Link>
+          <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/pokemons">Liste des Pokémon</Link>
+          <Link href="/pokemons">Pokémons</Link>
         </li>
         <li>
-          <Link href="/about">À propos</Link>
+          <Link href="/about">About</Link>
         </li>
       </ul>
 
