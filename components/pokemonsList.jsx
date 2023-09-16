@@ -8,13 +8,13 @@ export default function PokemonList({ pokemons }) {
     return (
         <div className="flex justify-center gap-3">
         <ul className="grid grid-cols-3 gap-1">{pokemons.map((pokemon, index) => (
-            <li key={index}>
+            <li className=" p-3 border-2 border-black"key={index}>
                 {pokemon.id}
                 {pokemon.name}
                 <Image 
                     src={imageURL+`${index + 1}.svg`}
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     alt={`Image of ${pokemon.name}`}
                 />
             </li>
