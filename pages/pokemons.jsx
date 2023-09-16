@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Image from "next/image";
+import Header from "@/components/header";
 
 export default function Pokemons() {
     const imageURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/'
@@ -14,6 +15,7 @@ export default function Pokemons() {
 
     return (
         <div>
+        <Header />
             <h1>All Pokémons</h1>
             <ul> {pokemons.map((pokemon, index) => (
                 <li key={index}>
