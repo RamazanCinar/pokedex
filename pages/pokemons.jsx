@@ -29,7 +29,7 @@ export default function Pokemons() {
     return (
         <div>
         <Header />
-            <h1>All Pokémons</h1>
+            <h1 className="text-center">All Pokémons</h1>
             <PokemonList pokemons={pokemons} />
         </div>
 

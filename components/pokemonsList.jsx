@@ -6,7 +6,8 @@ export default function PokemonList({ pokemons }) {
     const imageURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/';
     
     return (
-        <ul>{pokemons.map((pokemon, index) => (
+        <div className="flex justify-center gap-3">
+        <ul className="grid grid-cols-3 gap-1">{pokemons.map((pokemon, index) => (
             <li key={index}>
                 {pokemon.id}
                 {pokemon.name}
@@ -18,7 +19,8 @@ export default function PokemonList({ pokemons }) {
                 />
             </li>
         ))}   
-    </ul>)
+    </ul>
+    </div>)
 
 }
 
