@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react"
+import PokemonCard from "./pokemonCard";
 
 export default function SearchBar() {
     const [searchPokemon, setSearchPokemon] = useState('');
@@ -43,17 +44,8 @@ export default function SearchBar() {
 
         {error && <p>{error}</p>}
         {pokemonData && (
-            <div className="flex justify-center flex-col">
-          <h2>Informations about the Pokémon :</h2>
-          <p> Pokémon no : {pokemonData.id}</p>
-          <p> Name : {pokemonData.name}</p>
-          <Image 
-            src={pokemonData.sprites.other.dream_world.front_default} 
-            width={100}
-            height={100}
-            alt={`image of ${pokemonData.name}`}
-            />  
-        </div>
+
+        <PokemonCard pokemonData={pokemonData} />
       )}
         </div>
     )
