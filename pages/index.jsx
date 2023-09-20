@@ -8,6 +8,11 @@ export default function Home () {
     <div className="">
       <Header />
 
+      <h1>
+        Welcome to my Pokédex! You can explore and search for all 
+        existing Pokémon and access the data you need. Have fun!
+      </h1>
+
       <SearchBar />
 
 
