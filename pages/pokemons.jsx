@@ -33,7 +33,7 @@ export default function Pokemons() {
         <Header />
             <h1 className="text-center">All Pokémons</h1>
             <PokemonList pokemons={pokemons} />
-            <button className="m-2 p-2 flex mx-auto bg-red-500 hover:bg-red-900"
+            <button className=" text-white m-2 p-2 flex mx-auto bg-red-500 hover:bg-red-900"
             onClick={handleLoadMore}>Load more</button>
         </div>
 

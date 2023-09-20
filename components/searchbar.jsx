@@ -49,8 +49,8 @@ export default function SearchBar() {
           <p> Name : {pokemonData.name}</p>
           <Image 
             src={pokemonData.sprites.other.dream_world.front_default} 
-            width={250}
-            height={250}
+            width={100}
+            height={100}
             alt={`image of ${pokemonData.name}`}
             />  
         </div>
