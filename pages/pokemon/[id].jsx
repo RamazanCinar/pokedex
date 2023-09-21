@@ -1,13 +1,25 @@
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
+import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import PokemonCard from '@/components/pokemonCard';
 
 const PokemonDetails = () => {
   const router = useRouter();
   const { id } = router.query;
   const [pokemonData, setPokemonData] = useState(null);
+
+  const handlePreviousPokemon = () => {
+    const previousPokemonId = parseInt(id) - 1;
+    router.push(`/pokemon/${previousPokemonId}`);
+  }
+
+  const handleNextPokemon = () => {
+    const nextPokemonId = parseInt(id) + 1;
+    router.push(`/pokemon/${nextPokemonId}`);
+  }
 
 useEffect(() => {
     if (!id) return;
@@ -40,15 +52,9 @@ if (!id) {
 
   return (
     <div>
-      {/* <h1>Pokémon No: {id}</h1>
-      <h2>Name: {pokemonData.name}</h2>
-      <Image 
-            src={pokemonData.sprites.other.dream_world.front_default} 
-            width={100}
-            height={100}
-            alt={`image of ${pokemonData.name}`}
-            />   */}
             <PokemonCard pokemonData={pokemonData} />
+            <button onClick={handlePreviousPokemon}>Previous Pokémon</button>
+            <button onClick={handleNextPokemon}>Next Pokémon</button>
     </div>
   );
 };
