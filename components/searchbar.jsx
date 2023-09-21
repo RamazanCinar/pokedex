@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState } from "react"
 import PokemonCard from "./pokemonCard";
 
@@ -31,22 +30,26 @@ export default function SearchBar() {
     
     
     return (
-        <div className="flex justify-center flex-col">
+        <>
+        <div className=" overflow-visible flex justify-center flex-col">
             <form  className="flex justify-center" onSubmit={handleSearchSubmit}>
                 <input
-                    className="pl-2 p-1 border rounded-full border-gray-600"
+                    className="text-lg p-2 m-2 w-2/4 border rounded-full border-gray-600"
                     type="text"
                     placeholder="Search a pokemon"
                     value={searchPokemon}
                     onChange={handleSearchChange}
                     />
             </form>
+        </div>
 
+        <div className="flex justify-center">
         {error && <p>{error}</p>}
         {pokemonData && (
 
         <PokemonCard pokemonData={pokemonData} />
       )}
-        </div>
+      </div>
+      </>
     )
 }
