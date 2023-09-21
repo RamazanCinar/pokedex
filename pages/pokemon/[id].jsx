@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import PokemonCard from '@/components/pokemonCard';
+import Header from '@/components/header';
 
 const PokemonDetails = () => {
   const router = useRouter();
@@ -52,9 +52,11 @@ if (!id) {
 
   return (
     <div>
-            <PokemonCard pokemonData={pokemonData} />
-            <button onClick={handlePreviousPokemon}>Previous Pokémon</button>
-            <button onClick={handleNextPokemon}>Next Pokémon</button>
+      <Header />
+      <PokemonCard pokemonData={pokemonData} />
+      <button onClick={handlePreviousPokemon}>Previous Pokémon</button>
+      <button onClick={handleNextPokemon}>Next Pokémon</button>
+      <Link href="/pokemons">Back to Pokémon List</Link>
     </div>
   );
 };
