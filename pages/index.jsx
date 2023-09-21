@@ -8,7 +8,7 @@ export default function Home () {
     <div className="">
       <Header />
 
-      <h1>
+      <h1 className='flex justify-center mx-auto'>
         Welcome to my Pokédex! You can explore and search for all 
         existing Pokémon and access the data you need. Have fun!
       </h1>

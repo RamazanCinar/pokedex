@@ -17,7 +17,7 @@ export default function PokemonList({ pokemons }) {
             return (
             <li className=" p-3 border-2 border-black"key={index}>
                 <Link href={`/pokemon/${pokemonId}`} >
-                {pokemonId}
+                {/* {pokemonId} */}
                 {pokemon.name}
                 <Image 
                     src={imageURL+`${pokemonId}.svg`}
