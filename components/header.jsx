@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 export default function Header() {
+
     return (
         <div>
             <h1 className=" bg-red-500 flex justify-center text-7xl text-white font-bold  p-5">Pokédex</h1>
