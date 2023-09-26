@@ -7,10 +7,25 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'normal': '#CBC7BE',
+        'fire': '#F66D26',
+        'water': '#2074A3',
+        'grass': '#6AD03D',
+        'electric': '#D3BE3A',
+        'ice': '#C0E7E2',
+        'fighting': '#C09593',
+        'poison': '#7119A8',
+        'ground': '#AB9363',
+        'flying': '#819CD3',
+        'psychic': '#EB96AD',
+        'bug': '#D8DC7E',
+        'rock': '#C8CBC4',
+        'ghost': '#9070A2',
+        'dragon': '#AC9DDE',
+        'dark': '#A59B9C',
+        'steel': '#C1CBCD',
+        'fairy': '#F5CCDE',
       },
     },
   },
