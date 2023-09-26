@@ -6,6 +6,9 @@ export default function PokemonCard({pokemonData}) {
     const [pokemonDescription, setPokemonDescription] = useState('');
     const [pokemonType, setPokemonType] = useState('');
 
+    const types = pokemonData.types;
+    console.log(types);
+
     useEffect(() => {
         async function fetchData() {
         try {
@@ -14,13 +17,11 @@ export default function PokemonCard({pokemonData}) {
             console.log(speciesData);
             
             const description = speciesData.flavor_text_entries[0].flavor_text
-            console.log(description);
 
-            const type = pokemonData.types;
-            console.log(type);
+            
 
             setPokemonDescription(description);
-            setPokemonType(type);
+
         } catch (error) {
             console.error('Error fetching species data', error);
         }
@@ -37,10 +38,15 @@ export default function PokemonCard({pokemonData}) {
             alt={`image of ${pokemonData.name}`}
             className='w-full p-5'
             />  
-          <p className='font-bold text-xl mt-2'> #{pokemonData.id}</p>
-          <p className='font-bold text-xl mb-2'>{pokemonData.name}</p>
-          <p className='font-bold text-xl mb-2'>{pokemonDescription}</p>
-          <p className='font-bold text-xl mb-2'>test</p>
+          <p className='font-bold text-xl mt-2 p-1'> #{pokemonData.id}</p>
+          <p className='font-bold text-xl mb-2 p-1'>{pokemonData.name}</p>
+          <p className='font-bold text-xl mb-2 p-1'>{pokemonDescription}</p>
+          <ul>
+          {types.map((entry, index) => (
+                <li key={index}>{entry.type.name}</li>
+            ))}
+            </ul>
+          <p className='font-bold text-xl mb-2 p-1'>test</p>
     </div>
 
 
