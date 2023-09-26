@@ -11,14 +11,15 @@ export default function PokemonCard({pokemonData}) {
         try {
             const speciesResponse = await fetch(pokemonData.species.url);
             const speciesData = await speciesResponse.json();
+            console.log(speciesData);
+            
+            const description = speciesData.flavor_text_entries[0].flavor_text
+            console.log(description);
 
-            const description = speciesData.flavor_text_entries.find(
-                (entry) => entry.language.name === 'en'
-            );
+            const type = pokemonData.types;
+            console.log(type);
 
-            const type = speciesData.varieties[0].pokemon.type.name;
-
-            setPokemonDescription(description.flavor_text);
+            setPokemonDescription(description);
             setPokemonType(type);
         } catch (error) {
             console.error('Error fetching species data', error);
@@ -39,7 +40,7 @@ export default function PokemonCard({pokemonData}) {
           <p className='font-bold text-xl mt-2'> #{pokemonData.id}</p>
           <p className='font-bold text-xl mb-2'>{pokemonData.name}</p>
           <p className='font-bold text-xl mb-2'>{pokemonDescription}</p>
-          <p className='font-bold text-xl mb-2'>{pokemonType}</p>
+          <p className='font-bold text-xl mb-2'>test</p>
     </div>
 
 
