@@ -1,6 +1,4 @@
 /* eslint-disable react/prop-types */
-
-import Image from 'next/image'
 import { useEffect, useState } from 'react';
 
 export default function PokemonCard({pokemonData}) {
@@ -9,7 +7,6 @@ export default function PokemonCard({pokemonData}) {
     const types = pokemonData.types;
     const bgColor = types[0].type.name;
     console.log(bgColor);
-    JSON.stringify(bgColor);
 
     useEffect(() => {
         async function fetchData() {
@@ -26,8 +23,6 @@ export default function PokemonCard({pokemonData}) {
                     }
 });
 
-console.log(englishDescription);
-
             setPokemonDescription(englishDescription);
 
         } catch (error) {
@@ -38,13 +33,11 @@ console.log(englishDescription);
     fetchData();
     }, [pokemonData.species.url]);
     return (
-    <div className='mt-10 max-w-sm rounded-lg overflow-hidden shadow-lg hover:'>
-          <Image 
+    <div className='mt-10 max-w-sm rounded-lg overflow-hidden shadow-lg flex flex-col'>
+          <img 
             src={pokemonData.sprites.other.dream_world.front_default} 
-            width={100}
-            height={100}
             alt={`image of ${pokemonData.name}`}
-            className={`w-full p-5 bg-${bgColor}`}
+            className=" w-3/4 p-5 m-auto"
             />  
           <p className='font-bold text-xl mt-2 p-1'> #{pokemonData.id}</p>
           <p className='font-bold text-xl mb-2 p-1'>{pokemonData.name}</p>
@@ -59,3 +52,4 @@ console.log(englishDescription);
     </div>
     );
 }
+
