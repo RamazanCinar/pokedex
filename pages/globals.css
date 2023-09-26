@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Tektur';
+  src: url(https://fonts.gstatic.com/s/tektur/v3/XoHN2YHtS7q969kXCjzlV0aSkS_o8OacmTe0TYlYFot8TrwuVbtJacTZSHd1DqU.woff) format('woff');
+}
+html {
+  font-family: 'Tektur';
+}
+
+/* ### SOLUTION AU CAS OÙ:
+
+  @font-face {
+  font-family: 'Press Start 2P';
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v15/e3t4euO8T-267oIAQAu6jDQyK3nVivNm4I81.woff2) format('woff2');
+}
+html {
+  font-family: 'Press Start 2P';
+} */
