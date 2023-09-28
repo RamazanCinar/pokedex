@@ -33,15 +33,15 @@ export default function PokemonCard({pokemonData}) {
     fetchData();
     }, [pokemonData.species.url]);
     return (
-    <div className='mt-10 max-w-sm rounded-lg overflow-hidden shadow-lg flex flex-col'>
+    <div className='w-64 max-h-24-max sm:w-96 sm:h-max mt-10 rounded-lg overflow-y-auto shadow-lg flex flex-col'>
           <img 
             src={pokemonData.sprites.other.dream_world.front_default} 
             alt={`image of ${pokemonData.name}`}
-            className="w-72 h-72 p-5 m-auto"
+            className="w-48 h-48 sm:w-72 p-5 m-auto"
             />  
-          <p className='font-bold text-xl mt-2 p-1'> #{pokemonData.id}</p>
+          <p className='font-bold text-xl mt-1 p-1'> #{pokemonData.id}</p>
           <p className='font-bold text-xl mb-2 p-1'>{pokemonData.name}</p>
-          <p className='font-bold text-xl mb-2 p-1'>{pokemonDescription}</p>
+          <p className='text-sm font-bold sm:text-lg mb-2 p-1'>{pokemonDescription}</p>
           <ul className='p-2 space-x-2'>
           {types.map((entry, index) => (
                 <li key={index} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700'>

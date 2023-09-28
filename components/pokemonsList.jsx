@@ -13,7 +13,7 @@ export default function PokemonList({ pokemons }) {
             const pokemonId = urlSegments[urlSegments.length - 2];
 
             return (
-            <li className=" mt-10 max-w-sm rounded-lg overflow-hidden shadow-lg flex flex-col justify-center"key={index}>
+            <li className="mt-10 max-w-sm rounded-lg shadow-lg flex flex-col justify-center hover:transform hover:scale-110 hover:duration-150"key={index}>
                 <Link href={`/pokemon/${pokemonId}`} >
                 <img 
                     src={imageURL+`${pokemonId}.svg`}

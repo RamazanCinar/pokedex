@@ -54,11 +54,11 @@ if (!id) {
   return (
     <>
       <Header />
-      <Link href="/pokemons" className='mt-20 flex justify-center'>Back to Pokémon List</Link>
+      <Link href="/pokemons" className='mt-5 mx-auto flex justify-center w-48 p-1 px-2 bg-red-500 text-white rounded-lg hover:bg-red-800'>Back to Pokémon List</Link>
       <div className='flex justify-center'>
       <PokemonCard pokemonData={pokemonData} />
     </div>
-    <div className='mt-3 flex justify-center space-x-2'>
+    <div className='mt-3 mb-10 flex justify-center space-x-2'>
       <button onClick={handlePreviousPokemon} className='w-48 p-1 px-2 bg-red-500 text-white rounded-lg hover:bg-red-800'>Previous Pokémon</button>
       <button onClick={handleNextPokemon} className=' w-48 p-1 px-2 bg-red-500 text-white rounded-lg hover:bg-red-800'>Next Pokémon</button>
       </div>

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 import Header from "@/components/header";
 import PokemonList from "@/components/pokemonsList";
-import Footer from "@/components/footer";
 
 export default function Pokemons() {
     const [pokemons, setPokemons] = useState([]);
