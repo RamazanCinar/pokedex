@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 
 export default function About() {
@@ -10,6 +11,7 @@ export default function About() {
                     I chose Pokémon as the theme to enhance my development skills, simply because Pokémon are cool! 
                     Explore and discover my work. </div>
             </div>
+            <Footer />
         </>
     )
 }

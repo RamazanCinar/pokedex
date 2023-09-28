@@ -20,7 +20,7 @@ export default function PokemonList({ pokemons }) {
                     alt={`Image of ${pokemon.name}`}
                     className="w-2/3 h-2/3 m-auto"
                     />
-                <p className='m-6 flex justify-center text-2xl'>{pokemon.name}</p>
+                <p className='m-6 flex justify-center text-xl sm:text-3xl'>{pokemon.name}</p>
                 </Link>
             </li>
             )

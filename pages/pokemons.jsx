@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Header from "@/components/header";
 import PokemonList from "@/components/pokemonsList";
+import Footer from "@/components/footer";
 
 export default function Pokemons() {
     const [pokemons, setPokemons] = useState([]);
@@ -33,7 +34,7 @@ export default function Pokemons() {
         <Header />
             <h1 className="text-center text-3xl my-6 font-extrabold">All Pokémons</h1>
             <PokemonList pokemons={pokemons} />
-            <button className=" text-white m-2 p-2 flex mx-auto bg-red-500 hover:bg-red-900"
+            <button className=" text-white m-4 p-2 flex mx-auto rounded-lg bg-red-500 hover:bg-red-900"
             onClick={handleLoadMore}>Load more</button>
         </div>
 

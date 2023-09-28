@@ -37,14 +37,14 @@ export default function PokemonCard({pokemonData}) {
           <img 
             src={pokemonData.sprites.other.dream_world.front_default} 
             alt={`image of ${pokemonData.name}`}
-            className=" w-3/4 p-5 m-auto"
+            className="w-72 h-72 p-5 m-auto"
             />  
           <p className='font-bold text-xl mt-2 p-1'> #{pokemonData.id}</p>
           <p className='font-bold text-xl mb-2 p-1'>{pokemonData.name}</p>
           <p className='font-bold text-xl mb-2 p-1'>{pokemonDescription}</p>
-          <ul>
+          <ul className='p-2 space-x-2'>
           {types.map((entry, index) => (
-                <li key={index} className='space-x-2 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700'>
+                <li key={index} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700'>
                     {entry.type.name}
                 </li>
             ))}
