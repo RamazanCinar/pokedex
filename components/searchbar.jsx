@@ -14,7 +14,8 @@ export default function SearchBar() {
         event.preventDefault();
         
         try {
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchPokemon}/`);
+            const searchTerm = searchPokemon.toLowerCase();
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchTerm}/`);
             const data = await response.json();
             setPokemonData(data);
             setError(null);
