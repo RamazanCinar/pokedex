@@ -37,7 +37,7 @@ useEffect(() => {
     .then((data) => {
         setPokemonData(data);
     })
-    .catch((error) => {
+    .catch(() => {
         console.error('Error fetching data');
     });
 }, [id])
