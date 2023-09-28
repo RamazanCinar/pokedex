@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 import PokemonCard from '@/components/pokemonCard';
 import Header from '@/components/header';
-import Footer from '@/components/footer';
 
 const PokemonDetails = () => {
   const router = useRouter();
@@ -62,7 +61,6 @@ if (!id) {
       <button onClick={handlePreviousPokemon} className='w-48 p-1 px-2 bg-red-500 text-white rounded-lg hover:bg-red-800'>Previous Pokémon</button>
       <button onClick={handleNextPokemon} className=' w-48 p-1 px-2 bg-red-500 text-white rounded-lg hover:bg-red-800'>Next Pokémon</button>
       </div>
-      <Footer />
       </>
   );
 };
