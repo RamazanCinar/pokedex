@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import PokemonCard from '@/components/pokemonCard';
 import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 const PokemonDetails = () => {
   const router = useRouter();
@@ -51,13 +52,18 @@ if (!id) {
 
 
   return (
-    <div>
+    <>
       <Header />
+      <Link href="/pokemons" className='mt-5 mx-auto flex justify-center w-48 p-1 px-2 bg-red-500 text-white rounded-lg hover:bg-red-800'>Back to Pokémon List</Link>
+      <div className='flex justify-center'>
       <PokemonCard pokemonData={pokemonData} />
-      <button onClick={handlePreviousPokemon}>Previous Pokémon</button>
-      <button onClick={handleNextPokemon}>Next Pokémon</button>
-      <Link href="/pokemons">Back to Pokémon List</Link>
     </div>
+    <div className='mt-3 mb-10 flex justify-center space-x-2'>
+      <button onClick={handlePreviousPokemon} className='w-48 p-1 px-2 bg-red-500 text-white rounded-lg hover:bg-red-800'>Previous Pokémon</button>
+      <button onClick={handleNextPokemon} className=' w-48 p-1 px-2 bg-red-500 text-white rounded-lg hover:bg-red-800'>Next Pokémon</button>
+      </div>
+      <Footer />
+      </>
   );
 };
 

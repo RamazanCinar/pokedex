@@ -2,10 +2,11 @@
 
 import SearchBar from '@/components/searchbar';
 import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 export default function Home () {
   return (
-    <>
+    <div className='flex flex-col'>
       <Header />
       <div className='mt-10 py-6 w-full h-max md:w-4/6 mx-auto bg-red-500 rounded-t-lg'>
         <h1 className='flex justify-center mx-auto text-white  text-xl sm:text-3xl text-center sm:w-4/6'>
@@ -15,8 +16,7 @@ export default function Home () {
       </div>
 
       <SearchBar />
-
-
-    </>
+      <Footer />
+    </div>
   )
 }

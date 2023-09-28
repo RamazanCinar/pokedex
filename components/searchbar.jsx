@@ -32,7 +32,7 @@ export default function SearchBar() {
     return (
         <>
         <div className="flex justify-center flex-col">
-            <form  className="flex justify-center w-4/6 mx-auto pb-3 bg-red-500 rounded-b-lg" onSubmit={handleSearchSubmit}>
+            <form  className="flex justify-center w-full md:w-4/6 mx-auto pb-3 bg-red-500 rounded-b-lg" onSubmit={handleSearchSubmit}>
                 <input
                     className="text-lg p-2 m-2 w-2/4 border rounded-full border-gray-600"
                     type="text"
